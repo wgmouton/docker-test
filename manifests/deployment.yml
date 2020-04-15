@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "testzakube1"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "testzakube1"
+    spec:
+      containers:
+        - name: "testzakube1"
+          image: "wyzetalkdockertest.azurecr.io/testzakube1"
+          ports:
+          - containerPort: 80
