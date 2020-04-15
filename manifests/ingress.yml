@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "testzakube1"
+    labels:
+        app: "testzakube1"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: testzakube17cb9-testzakube1.3a20664dd76f41388b48.southafricanorth.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "testzakube1"
+                servicePort: 80
